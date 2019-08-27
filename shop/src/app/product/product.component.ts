@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
+import * as alertify from 'alertifyjs';
 
 @Component({
   selector: 'app-product',
@@ -20,6 +21,6 @@ export class ProductComponent implements OnInit {
   }
 
   addToCard(product){
-    alert("Sepete eklendi : " +product.name);
+    alertify.success(product.name +" added")
   }
 }
