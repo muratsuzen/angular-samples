@@ -1,16 +1,42 @@
 <h3>Yeni Ürün Ekle - Reactive</h3>
-<form [formGroup]="productAddForm" (ngSubmit)="add()" class="form-group">
-    <div>
+<form [formGroup]="productAddForm" (ngSubmit)="add()">
+    <div class="form-group">
         <input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Ürün adı">
         <div class="alert alert-danger"
             *ngIf="productAddForm.get('name').hasError('required') && productAddForm.get('name').dirty">Ürün adı
             zorunludur</div>
     </div>
-    <div>
+    <div class="form-group">
         <input type="text" id="description" name="description" formControlName="description" class="form-control"
             placeholder="Ürün açıklaması">
         <div class="alert alert-danger"
-            *ngIf="productAddForm.get('description').hasError('required') && productAddForm.get('description').dirty">Ürün açıklaması
+            *ngIf="productAddForm.get('description').hasError('required') && productAddForm.get('description').dirty">
+            Ürün açıklaması
             zorunludur</div>
     </div>
+    <div class="form-group">
+        <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" class="form-control"
+            placeholder="Foroğraf yolu">
+        <div class="alert alert-danger"
+            *ngIf="productAddForm.get('imageUrl').hasError('required') && productAddForm.get('imageUrl').dirty">
+            Foroğraf
+            zorunludur</div>
+    </div>
+    <div class="form-group">
+        <input type="text" id="price" name="price" formControlName="price" class="form-control"
+            placeholder="Ürün fiyatı">
+        <div class="alert alert-danger"
+            *ngIf="productAddForm.get('price').hasError('required') && productAddForm.get('price').dirty">
+            Fiyat
+            zorunludur</div>
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="categoryId" id="categoryId" formControlName="categoryId" required>
+            <option *ngFor="let category of categories" [value]="category.Id">{{category.name}}</option>
+        </select>
+        <div class="alert alert-danger"
+            *ngIf="productAddForm.get('categoryId').hasError('required') && productAddForm.get('categoryId').touched">
+            Kategori Gereklidir!</div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid">Ürün Ekle</button>
 </form>

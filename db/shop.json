@@ -23,6 +23,14 @@
       "categoryId": "2",
       "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone8-plus-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795417455",
       "id": 3
+    },
+    {
+      "name": "Buzdolabı",
+      "description": "Arçelik no-frost buzdolabı",
+      "imageUrl": "https://www.arcelik.com.tr/content/dam/arcelik-tr/arcelikTurkeyProductCatalog/commerce/global/5374-Beyaz-Esya/5375-Buzdolabi/5376-No-Frost-Buzdolabi/7296520180-283720-Diamond/7296520180-283720-Diamond-5376-No-Frost-Buzdolabi-7296520180-F1753-54366-01082018.png",
+      "price": "2000",
+      "categoryId": "undefined",
+      "id": 4
     }
   ],
   "categories": [
