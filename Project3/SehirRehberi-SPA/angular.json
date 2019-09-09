@@ -89,9 +89,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../node_modules/alertifyjs/build/alertifyjs.min.js"
+            ]
           }
         },
         "lint": {
